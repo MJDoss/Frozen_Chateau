@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "scr_Macros",
+  "name": "scr_InputFunctions",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {

@@ -1,8 +1,11 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "O_Boot",
-  "spriteId": null,
+  "name": "O_PressStartButton",
+  "spriteId": {
+    "name": "TitleScreen_PressStart",
+    "path": "sprites/TitleScreen_PressStart/TitleScreen_PressStart.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,
@@ -23,11 +26,12 @@
   "physicsShapePoints": [],
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Global Scope",
-    "path": "folders/Objects/Global Scope.yy",
+    "name": "Title Screen Room",
+    "path": "folders/Objects/Instance Scope/Title Screen Room.yy",
   },
 }

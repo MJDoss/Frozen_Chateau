@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "O_Boot",
+  "name": "O_TitleScreenCamera",
   "spriteId": null,
   "solid": false,
   "visible": true,
@@ -27,7 +27,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Global Scope",
-    "path": "folders/Objects/Global Scope.yy",
+    "name": "Title Screen Room",
+    "path": "folders/Objects/Instance Scope/Title Screen Room.yy",
   },
 }
