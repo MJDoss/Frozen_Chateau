@@ -4,7 +4,7 @@ ini_open("config.ini");
 
 global.settings = {
 	winscale : ini_read_real("prefs", "winscale", 2),
-	master_volume : ini_read_real("prefs", "masterVolume", 1),
+	master_volume : ini_read_real("prefs", "masterVolume", .5),
 	SFX_volume : ini_read_real("prefs", "SFXVolume", 0.5),
 	music_volume : ini_read_real("prefs", "musicVolume", 0.5)
 }
