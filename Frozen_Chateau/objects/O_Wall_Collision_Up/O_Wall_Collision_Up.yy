@@ -4,7 +4,7 @@
     "path": "sprites/spr_Wall_Up/spr_Wall_Up.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,

@@ -5,8 +5,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "O_Effected_By_Chunk_Loading",
-    "path": "objects/O_Effected_By_Chunk_Loading/O_Effected_By_Chunk_Loading.yy",
+    "name": "O_Effected_By_Walls",
+    "path": "objects/O_Effected_By_Walls/O_Effected_By_Walls.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -24,11 +24,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Enemy objects",
-    "path": "folders/Objects/Instance Scope/In game objects/Affected by Walls/Enemy objects.yy",
+    "name": "Affected by Walls",
+    "path": "folders/Objects/Instance Scope/In game objects/Affected by Walls.yy",
   },
   "resourceVersion": "1.0",
-  "name": "O_Enemy",
+  "name": "O_Effected_By_Chunk_Loading",
   "tags": [],
   "resourceType": "GMObject",
 }

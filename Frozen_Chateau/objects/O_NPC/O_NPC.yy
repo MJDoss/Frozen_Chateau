@@ -4,7 +4,10 @@
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "O_Effected_By_Chunk_Loading",
+    "path": "objects/O_Effected_By_Chunk_Loading/O_Effected_By_Chunk_Loading.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,

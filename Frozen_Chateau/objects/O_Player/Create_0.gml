@@ -1,6 +1,7 @@
 /// @description 
 
 States = { // States when player has control of the character.
+	Spawn : 255,
 	Idle : 0,
 	Walk : 1,
 	Roll : 2,
@@ -37,6 +38,7 @@ max_roll_timer = 30;
 roll_timer = 0;
 max_flask_timer = 40;
 flask_timer = 0;
+spawn_timer = 20;
 
 move_speed = 1.3;
 roll_speed = 3;

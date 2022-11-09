@@ -10,6 +10,7 @@
     {"id":{"name":"SFX_message_finish","path":"sounds/SFX_message_finish/SFX_message_finish.yy",},"order":3,},
     {"id":{"name":"spr_Block","path":"sprites/spr_Block/spr_Block.yy",},"order":0,},
     {"id":{"name":"fDialogue_x4","path":"fonts/fDialogue_x4/fDialogue_x4.yy",},"order":0,},
+    {"id":{"name":"O_Effected_By_Chunk_Loading","path":"objects/O_Effected_By_Chunk_Loading/O_Effected_By_Chunk_Loading.yy",},"order":5,},
     {"id":{"name":"spr_GUI_health_bar_60","path":"sprites/spr_GUI_health_bar_60/spr_GUI_health_bar_60.yy",},"order":12,},
     {"id":{"name":"O_Fill_bar_master","path":"objects/O_Fill_bar_master/O_Fill_bar_master.yy",},"order":1,},
     {"id":{"name":"spr_Chateau_Tiles","path":"sprites/spr_Chateau_Tiles/spr_Chateau_Tiles.yy",},"order":0,},

@@ -1,6 +1,11 @@
 /// @description 
 
 switch(state){
+	case States.Spawn:
+		speed=0;
+		image_speed=0;
+		if(spawn_timer ==0) state = States.Idle;
+		spawn_timer--;
 	case States.Idle:
 		speed = 0;
 		switch(facing){
@@ -220,8 +225,8 @@ switch(state){
 }
 
 // Health check
-if(HP < 0){
-	HP = 0;
+if(global.PlayerData.HP < 0){
+	global.PlayerData.HP = 0;
 	
 } 
 
