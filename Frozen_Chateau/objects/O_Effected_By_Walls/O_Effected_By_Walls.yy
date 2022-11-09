@@ -21,8 +21,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "In game objects",
-    "path": "folders/Objects/Instance Scope/In game objects.yy",
+    "name": "Affected by Walls",
+    "path": "folders/Objects/Instance Scope/In game objects/Affected by Walls.yy",
   },
   "resourceVersion": "1.0",
   "name": "O_Effected_By_Walls",

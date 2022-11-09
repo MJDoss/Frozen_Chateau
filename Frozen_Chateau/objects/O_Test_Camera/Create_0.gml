@@ -23,4 +23,7 @@ max_black_timer = 15;
 black_timer = max_black_timer;
 max_fade_in_black_timer = 15;
 fade_in_black_timer = max_fade_in_black_timer;
+black_fade_alpha = .99 / max_fade_in_black_timer;
 lock = false;
+
+draw_start_menu = false;
