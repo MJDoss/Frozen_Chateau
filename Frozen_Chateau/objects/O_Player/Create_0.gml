@@ -8,12 +8,14 @@ States = { // States when player has control of the character.
 	Grab : 3,
 	Atk_Sword : 5,
 	Pre_Atk_Secondary : 6,
-	Atk_Secondary : 7,
-	Use_Flask : 9,
+	Atk_Crossbow : 7,
+	Atk_Bombs : 8,
+	Atk_Firerod : 9,
+	Use_Flask : 10,
 	
 	
 	// States for when player doesn't have control
-	Froze : 30,
+	Rest : 30,
 	Walk_Door : 31,
 	Map : 32,
 	Inventory : 33,
@@ -30,18 +32,18 @@ Facing_states = {
 }
 facing = Facing_states.Down;
 
-iframe_timer = 0;
+iframes = 0;
 door_walk_timer = 0;
 max_atk_sword_timer = 60;
 atk_sword_timer = 0;
-max_roll_timer = 30;
-roll_timer = 0;
-max_flask_timer = 40;
+//max_roll_timer = 29;
+roll_iframes = 20;
+max_flask_timer = 30;
 flask_timer = 0;
 spawn_timer = 20;
 
 move_speed = 1.3;
-roll_speed = 3;
+roll_speed = 3.2;
 
 //Stamina costs
 stamina_cost = 10;
@@ -50,7 +52,7 @@ stamina_wait = 0;
 stamina_regen_rate = 0.3;
 
 state = States.Idle;
-prev_state = state;
+//prev_state = state;
 speed = 0;
 direction = 270;
 
@@ -58,7 +60,9 @@ function Hurt_Speed(_damage){
 	return _damage/10;
 }
 function Hurt_IFrames(_damage){
-	return floor(_damage/3);
+	return floor(_damage/2);
 }
-
+function has_iframes(){
+	return (iframe_timer > 0);
+}
 

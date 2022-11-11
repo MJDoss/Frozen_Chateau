@@ -35,7 +35,7 @@ switch(state){
 			atk_sword_timer = max_atk_sword_timer;
 			state=States.Atk_Sword; }
 		if(YButtonPressed()){ state=States.Pre_Atk_Secondary; }
-		if(BButtonPressed()){ state=States.Pre_Use_Flask; }
+		if(BButtonPressed()){ state=States.Use_Flask; }
 		// if(AButtonPressed()){ }
 		if(StartPressed()){ 
 			state=States.Inventory;
@@ -103,20 +103,23 @@ switch(state){
 			atk_sword_timer = max_atk_sword_timer;
 			state=States.Atk_Sword; }
 		if(YButtonPressed()){ state=States.Pre_Atk_Secondary; }
-		if(BButtonPressed()){ state=States.Pre_Use_Flask; }
+		if(BButtonPressed() && global.PlayerData.flask_count > 0){
+			flask_timer = max_flask_timer;
+			state=States.Use_Flask; 
+			}
 		if(AButtonPressed() && (global.PlayerData.stamina >= 10) ){ 
 			stamina_wait = max_stamina_wait;
 			global.PlayerData.stamina -= stamina_cost;
-			roll_timer = max_roll_timer;
+			iframes = roll_iframes;
+			image_index = 0;
 			state=States.Roll; 
 		}
+		
 		if(StartPressed()){ 
 			state=States.Inventory;
-			inControl = false;
 			}
 		if(SelectPressed()){ 
 			state = States.Map;
-			inControl = false;
 			}
 			
 	break;
@@ -133,16 +136,15 @@ switch(state){
 				image_xscale = 1;
 			break;
 			case Facing_states.Left:
-				//sprite_index = spr_Ocelotte_side;
+				sprite_index = spr_Ocelotte_roll_side;
 				image_xscale = 1;
 			break;
 			case Facing_states.Right:
-				//sprite_index = spr_Ocelotte_side;
+				sprite_index = spr_Ocelotte_roll_side;
 				image_xscale = -1;
 			break;
 		}
-		roll_timer--;
-		if(roll_timer <= 0){
+		if(image_index >= image_number-1){
 			state=States.Idle;
 		}
 	break;
@@ -175,36 +177,86 @@ switch(state){
 	break;
 		
 	case States.Pre_Atk_Secondary:
-		
+		switch (global.PlayerData.secondary_equip){
+			case inv_crossbow:
+			
+			break;
+			case inv_bombs:
+			
+			break;
+			case inv_firerod:
+			
+			break;
+		}
 	break;
 		
-	case States.Atk_Secondary:
+	case States.Atk_Crossbow:
+		
+	break;
+	case States.Atk_Bombs:
+		
+	break;
+	case States.Atk_Firerod:
 		
 	break;
 		
 	case States.Use_Flask:
-		
-	break;
-		
-	default:
-		state=States.Idle;
+		if(flask_timer <= 0){
+			global.PlayerData.flask_count--;
+			global.PlayerData.HP += 60;
+			state = States.Idle;
+			}
+		flask_timer--;
 	break;
 
-	case States.Froze:
+	case States.Rest:
 		speed = 0;
 		image_speed = 0;
 	break;
+	
+	
 	case States.Walk_Door:
+	// This state is set from the Chunk object when it is being deactivated.
+		switch(facing){
+			case Facing_states.Up:
+				sprite_index = spr_Ocelotte_walk_up;
+				image_xscale = 1;
+				direction = 90;
+			break;
+			case Facing_states.Down:
+				sprite_index = spr_Ocelotte_walk_down;
+				image_xscale = 1;
+				direction = 270;
+			break;
+			case Facing_states.Left:
+				sprite_index = spr_Ocelotte_walk_side;
+				image_xscale = 1;
+				direction = 180;
+			break;	
+			case Facing_states.Right:
+				sprite_index = spr_Ocelotte_walk_side;
+				image_xscale = -1;
+				direction = 0;
+			break;		
+		}
+		speed = move_speed;
 		if (door_walk_timer <= 0){
-			inControl = true;
 			state = States.Idle;
 		}
 		door_walk_timer--;
 	break;
+	
+	
 	case States.Map:
-			
+		// Create the map object	
 		if(SelectPressed() || BButtonPressed()){
-			inControl = true;
+			// Delete the map object
+			state = States.Idle;
+		}
+	break;
+	
+	case States.Inventory:
+		if(StartPressed() || BButtonPressed()){
 			state = States.Idle;
 		}
 	break;
@@ -214,21 +266,31 @@ switch(state){
 		image_speed =0;
 	break;
 	
+	case States.Hurt:
+	// Set a speed, and direction and timer based on what you were hit by.
+		
+	break;
+	
 	case States.Dead:
 		speed = 0;
 	break;
 		
 	default:
 		state = States.Idle;
-		inControl = true;
 	break;
 }
+
+// iframe timer
+if(iframes > 0) iframes--;
 
 // Health check
 if(global.PlayerData.HP < 0){
 	global.PlayerData.HP = 0;
-	
+	state = States.Dead;
 } 
+if(global.PlayerData.HP > global.PlayerData.max_HP){
+	global.PlayerData.HP = global.PlayerData.max_HP;	
+}
 
 // Stamina regen section
 if (global.PlayerData.stamina < global.PlayerData.max_stamina){

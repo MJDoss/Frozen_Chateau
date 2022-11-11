@@ -39,7 +39,9 @@ function Create_Save_File(){
 	// Player Data
 	ini_write_real("PlayerData","Max_HP",60);
 	ini_write_real("PlayerData","Max_Stamina",60);
-	ini_write_real("PlayerData","Max_Flask", 3);
+	ini_write_real("PlayerData","Flask_Count", 3);
+	ini_write_real("PlayerData","Max_Flask_Count", 3);
+	ini_write_real("PlayerData","Flask_Heal", 40);
 	ini_write_string("PlayerData", "Fountain", "Start");
 	ini_write_string("PlayerData", "Room", "rm_Chateau_Entrance");
 	
@@ -56,7 +58,8 @@ function Create_Save_File(){
 	
 	// Fire rod
 	ini_write_real("InventoryData","Firerod_acquired",false);
-	
+	ini_write_real("InventoryData","Firerod_max_ammo",-1);
+	ini_write_real("InventoryData","Firerod_ammo",-1);
 	ini_close();
 }
 
@@ -85,13 +88,18 @@ function Init_Player_Data(){
 	
 	
 	global.PlayerData = {
-	HP : ini_read_real("PlayerData", "MaxHP",60),
-	max_HP : ini_read_real("PlayerData", "MaxHP",60),
-	stamina : ini_read_real("PlayerData", "MaxHP",60),
-	max_stamina : ini_read_real("PlayerData", "MaxHP",60),
-	fountain : ini_read_string("PlayerData", "Fountain", "Start"),
+	HP : ini_read_real("PlayerData", "Max_HP",60),
+	max_HP : ini_read_real("PlayerData", "Max_HP",60),
+	stamina : ini_read_real("PlayerData", "Max_Stamina",60),
+	max_stamina : ini_read_real("PlayerData", "Max_Stamina",60),
+	flask_count : ini_read_real("PlayerData", "Flask_count",3),
+	max_flask_count : ini_read_real("PlayerData", "Max_Flask_count",3),
+	flask_heal : ini_read_real("PlayerData", "Flask_heal",40),
 	p_room : ini_read_string("PlayerData", "Room", "rm_Chateau_Entrance"),
-	inventory : [inv_crossbow, inv_bombs, inv_firerod]
+	//chunk : ini_read_string("PlayerData", "Chunk", "rm_Chateau_Entrance"),
+	fountain : ini_read_string("PlayerData", "Fountain", "Start"),
+	inventory : [inv_crossbow, inv_bombs, inv_firerod],
+	secondary_equip : inv_crossbow
 	}	
 	ini_close();
 }

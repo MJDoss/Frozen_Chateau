@@ -21,5 +21,5 @@ spawn_timer = 5;
 max_slide_timer = 20;
 slide_timer = 0;
 
-
+floor_layer = layer_get_id("Floor_Tiles_1_0");
 
