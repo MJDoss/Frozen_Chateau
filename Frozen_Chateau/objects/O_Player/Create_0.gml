@@ -17,8 +17,8 @@ States = { // States when player has control of the character.
 	// States for when player doesn't have control
 	Rest : 30,
 	Walk_Door : 31,
-	Map : 32,
-	Inventory : 33,
+	//Map : 32,
+	//Inventory : 33,
 	Hurt : 34,
 	Read : 35,
 	Dead : 36
@@ -63,6 +63,6 @@ function Hurt_IFrames(_damage){
 	return floor(_damage/2);
 }
 function has_iframes(){
-	return (iframe_timer > 0);
+	return (iframes > 0);
 }
 

@@ -37,14 +37,7 @@ switch(state){
 		if(YButtonPressed()){ state=States.Pre_Atk_Secondary; }
 		if(BButtonPressed()){ state=States.Use_Flask; }
 		// if(AButtonPressed()){ }
-		if(StartPressed()){ 
-			state=States.Inventory;
-			inControl = false;
-			}
-		if(SelectPressed()){ 
-			state = States.Map;
-			inControl = false;
-			}
+
 	break;
 		
 	case States.Walk:
@@ -114,13 +107,6 @@ switch(state){
 			image_index = 0;
 			state=States.Roll; 
 		}
-		
-		if(StartPressed()){ 
-			state=States.Inventory;
-			}
-		if(SelectPressed()){ 
-			state = States.Map;
-			}
 			
 	break;
 		
@@ -247,19 +233,6 @@ switch(state){
 	break;
 	
 	
-	case States.Map:
-		// Create the map object	
-		if(SelectPressed() || BButtonPressed()){
-			// Delete the map object
-			state = States.Idle;
-		}
-	break;
-	
-	case States.Inventory:
-		if(StartPressed() || BButtonPressed()){
-			state = States.Idle;
-		}
-	break;
 		
 	case States.Read:
 		speed = 0;
