@@ -42,6 +42,7 @@ switch(state){
 		
 	case States.Walk:
 		speed = move_speed;
+		image_speed = 1;
 		switch(facing){
 			case Facing_states.Up:
 				sprite_index = spr_Ocelotte_walk_up;
@@ -59,8 +60,7 @@ switch(state){
 				sprite_index = spr_Ocelotte_walk_side;
 				image_xscale = -1;
 			break;
-		}
-		image_speed = 1;		
+		}	
 		if(UpCheck()){
 			direction = 90;
 			facing = Facing_states.Up;
@@ -95,7 +95,7 @@ switch(state){
 			global.PlayerData.stamina -= stamina_cost;
 			atk_sword_timer = max_atk_sword_timer;
 			state=States.Atk_Sword; }
-		if(YButtonPressed()){ state=States.Pre_Atk_Secondary; }
+		if(YButtonPressed() && use_equipped_timer<=0){ state=States.Pre_Atk_Secondary; }
 		if(BButtonPressed() && global.PlayerData.flask_count > 0){
 			flask_timer = max_flask_timer;
 			state=States.Use_Flask; 
@@ -177,8 +177,38 @@ switch(state){
 	break;
 		
 	case States.Atk_Crossbow:
-		
+		if cb_timer == max_cb_timer{
+			var spawn_dist = 6;
+			switch(facing){
+				case Facing_states.Up:
+					sprite_index = spr_Ocelotte_use_up;
+					image_xscale = 1;
+					instance_create_depth(x,y-spawn_dist,depth,O_Projectile_Bomb);
+				break;
+				case Facing_states.Down:
+					sprite_index = spr_Ocelotte_use_down;
+					image_xscale = 1;
+					instance_create_depth(x,y+spawn_dist,depth,O_Projectile_Bomb);
+				break;
+				case Facing_states.Left:
+					sprite_index = spr_Ocelotte_use_side;
+					image_xscale = 1;
+					instance_create_depth(x-spawn_dist,y,depth,O_Projectile_Bomb);
+				break;
+				case Facing_states.Right:
+					sprite_index = spr_Ocelotte_use_side;
+					image_xscale = -1;
+					instance_create_depth(x+spawn_dist,y,depth,O_Projectile_Bomb);
+				break;
+			}
+		}
+		if(cb_timer <= 0){
+			use_equipped_timer = max_use_equipped_timer;
+			state = States.Idle;
+		}
+		cb_timer--;
 	break;
+	
 	case States.Atk_Bombs:
 		if bomb_timer == max_bomb_timer{
 			var spawn_dist = 6;
@@ -205,7 +235,10 @@ switch(state){
 				break;
 			}
 		}
-		if(bomb_timer <= 0) state = States.Idle;	
+		if(bomb_timer <= 0){
+			use_equipped_timer = max_use_equipped_timer;
+			state = States.Idle;
+		}
 		bomb_timer--;
 	break;
 	case States.Atk_Firerod:
@@ -281,6 +314,9 @@ switch(state){
 
 // iframe timer
 if(iframes > 0) iframes--;
+
+// Equipped item cooldown
+if(use_equipped_timer > 0) use_equipped_timer--;
 
 // Change Equipped item in Y slot
 if(LButtonPressed()){

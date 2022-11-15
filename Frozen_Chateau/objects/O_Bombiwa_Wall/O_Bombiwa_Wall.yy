@@ -4,10 +4,7 @@
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "O_Effected_By_Chunk_Loading",
-    "path": "objects/O_Effected_By_Chunk_Loading/O_Effected_By_Chunk_Loading.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -20,17 +17,15 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Enemy objects",
-    "path": "folders/Objects/Instance Scope/In game objects/Affected by Walls/Enemy objects.yy",
+    "name": "NPCs",
+    "path": "folders/Objects/Instance Scope/In game objects/Affected by Walls/NPCs.yy",
   },
   "resourceVersion": "1.0",
-  "name": "O_Enemy",
+  "name": "O_Bombiwa_Wall",
   "tags": [],
   "resourceType": "GMObject",
 }

@@ -1,12 +1,15 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_Enemy_Slime",
+    "path": "sprites/spr_Enemy_Slime/spr_Enemy_Slime.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "O_Effected_By_Chunk_Loading",
-    "path": "objects/O_Effected_By_Chunk_Loading/O_Effected_By_Chunk_Loading.yy",
+    "name": "O_Enemy",
+    "path": "objects/O_Enemy/O_Enemy.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -22,6 +25,7 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -30,7 +34,7 @@
     "path": "folders/Objects/Instance Scope/In game objects/Affected by Walls/Enemy objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "O_Enemy",
+  "name": "O_Enemy_Slime",
   "tags": [],
   "resourceType": "GMObject",
 }

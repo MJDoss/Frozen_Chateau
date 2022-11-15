@@ -43,6 +43,11 @@ flask_timer = 0;
 spawn_timer = 20;
 max_bomb_timer = 15;
 bomb_timer = 0;
+max_cb_timer = 15;
+cb_timer = 0;
+max_use_equipped_timer = 30;
+use_equipped_timer = 0;
+
 max_hurt_timer = 20;
 hurt_timer =0;
 
