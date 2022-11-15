@@ -1,7 +1,7 @@
 /// @description 
 
 
-arr = ["x1", "x2", "x3", "x4", "Back"];
+arr = ["x2", "x4", "Back"];
 
 
 ind = 0;

@@ -27,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Visual Settings Room",
-    "path": "folders/Objects/Instance Scope/Settings Room/Visual Settings Room.yy",
+    "name": "Audio Settings Room",
+    "path": "folders/Objects/Instance Scope/Settings Room/Audio Settings Room.yy",
   },
   "resourceVersion": "1.0",
   "name": "O_Fill_bar_music",

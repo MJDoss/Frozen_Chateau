@@ -32,7 +32,7 @@
     "spriteId": {"name":"spr_Ocelotte_use_down","path":"sprites/spr_Ocelotte_use_down/spr_Ocelotte_use_down.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 30.0,
+    "playbackSpeed": 1.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

@@ -10,6 +10,17 @@ global.settings = {
 	music_volume : ini_read_real("prefs", "musicVolume", 0.5)
 } 
 */
+function load_settings(){
+ini_open("Settings.ini");
+	global.settings = {
+		winscale : ini_read_real("prefs", "winscale", 2),
+		master_volume : ini_read_real("prefs", "masterVolume", .5),
+		SFX_volume : ini_read_real("prefs", "SFXVolume", 0.5),
+		music_volume : ini_read_real("prefs", "musicVolume", 0.5)
+	}
+ini_close();
+}
+
 
 function save_settings(){
 	ini_open("Settings.ini");

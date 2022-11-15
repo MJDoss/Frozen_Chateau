@@ -135,8 +135,6 @@ switch(state){
 		}
 	break;
 		
-	case States.Grab:
-	break;
 		
 	case States.Atk_Sword:
 		speed = 0;
@@ -163,15 +161,17 @@ switch(state){
 	break;
 		
 	case States.Pre_Atk_Secondary:
-		switch (global.PlayerData.secondary_equip){
-			case inv_crossbow:
-			
+		speed = 0;
+		switch (global.PlayerInventory.equipped){
+			case global.PlayerInventory.inventory[0]: // Crossbow
+				state = States.Atk_Crossbow;
 			break;
-			case inv_bombs:
-			
+			case global.PlayerInventory.inventory[1]: // Bombs
+				bomb_timer = max_bomb_timer;
+				state = States.Atk_Bombs;				
 			break;
-			case inv_firerod:
-			
+			case global.PlayerInventory.inventory[2]: // Fire rod
+				state = States.Atk_Firerod;
 			break;
 		}
 	break;
@@ -180,7 +180,33 @@ switch(state){
 		
 	break;
 	case States.Atk_Bombs:
-		
+		if bomb_timer == max_bomb_timer{
+			var spawn_dist = 6;
+			switch(facing){
+				case Facing_states.Up:
+					sprite_index = spr_Ocelotte_use_up;
+					image_xscale = 1;
+					instance_create_depth(x,y-spawn_dist,depth,O_Projectile_Bomb);
+				break;
+				case Facing_states.Down:
+					sprite_index = spr_Ocelotte_use_down;
+					image_xscale = 1;
+					instance_create_depth(x,y+spawn_dist,depth,O_Projectile_Bomb);
+				break;
+				case Facing_states.Left:
+					sprite_index = spr_Ocelotte_use_side;
+					image_xscale = 1;
+					instance_create_depth(x-spawn_dist,y,depth,O_Projectile_Bomb);
+				break;
+				case Facing_states.Right:
+					sprite_index = spr_Ocelotte_use_side;
+					image_xscale = -1;
+					instance_create_depth(x+spawn_dist,y,depth,O_Projectile_Bomb);
+				break;
+			}
+		}
+		if(bomb_timer <= 0) state = States.Idle;	
+		bomb_timer--;
 	break;
 	case States.Atk_Firerod:
 		
@@ -256,6 +282,13 @@ switch(state){
 // iframe timer
 if(iframes > 0) iframes--;
 
+// Change Equipped item in Y slot
+if(LButtonPressed()){
+	set_Equipped_Item_Prev();
+}
+if(RButtonPressed()){
+	set_Equipped_Item_Next();
+}
 // Health check
 if(global.PlayerData.HP < 0){
 	global.PlayerData.HP = 0;
@@ -270,7 +303,6 @@ if (global.PlayerData.stamina < global.PlayerData.max_stamina){
 	if(stamina_wait <= 0)global.PlayerData.stamina+= stamina_regen_rate;
 	stamina_wait--;
 }
-
 if(global.PlayerData.stamina > global.PlayerData.max_stamina){
 	global.PlayerData.stamina = global.PlayerData.max_stamina;
 }

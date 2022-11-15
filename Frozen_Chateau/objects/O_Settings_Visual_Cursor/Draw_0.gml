@@ -3,6 +3,7 @@
 draw_self();
 
 switch (word){
+	/*
 	case "x1" :
 		x = 44;
 		y = 80;
@@ -20,7 +21,7 @@ switch (word){
 			ind++;
 			}
 	break;
-	
+	*/
 	case "x2" :
 		x = 84;
 		y = 80;
@@ -38,7 +39,7 @@ switch (word){
 			ind++;
 			}
 	break;
-	
+	/*
 	case "x3" :
 		x = 124;
 		y = 80;
@@ -56,7 +57,7 @@ switch (word){
 			ind++;
 			}
 	break;
-	
+	*/
 	case "x4" :
 		x = 164;
 		y = 80;

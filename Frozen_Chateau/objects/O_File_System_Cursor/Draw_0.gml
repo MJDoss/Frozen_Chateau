@@ -33,6 +33,10 @@ switch (word){
 			Init_Player_Data();
 			audio_stop_all();
 			room_goto(rm_TestRoom_0);
+			
+			
+			
+			
 		}
 		if(UpPressed()){ 
 			audio_play_sound(SFX_message,1,0);

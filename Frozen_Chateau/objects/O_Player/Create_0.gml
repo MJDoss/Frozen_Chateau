@@ -41,6 +41,11 @@ roll_iframes = 20;
 max_flask_timer = 30;
 flask_timer = 0;
 spawn_timer = 20;
+max_bomb_timer = 15;
+bomb_timer = 0;
+max_hurt_timer = 20;
+hurt_timer =0;
+
 
 move_speed = 1.3;
 roll_speed = 3.2;
