@@ -1,16 +1,10 @@
 {
-  "spriteId": {
-    "name": "spr_Wall_Left",
-    "path": "sprites/spr_Wall_Left/spr_Wall_Left.yy",
-  },
+  "spriteId": null,
   "solid": false,
-  "visible": false,
+  "visible": true,
   "spriteMaskId": null,
-  "persistent": false,
-  "parentObjectId": {
-    "name": "O_Wall",
-    "path": "objects/O_Wall/O_Wall.yy",
-  },
+  "persistent": true,
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -25,16 +19,18 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":2,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":12,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":77,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":74,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Invisible Objects",
-    "path": "folders/Objects/Instance Scope/In game objects/Invisible Objects.yy",
+    "name": "Map Menu Assets",
+    "path": "folders/Objects/Instance Scope/In game objects/Map Menu Assets.yy",
   },
   "resourceVersion": "1.0",
-  "name": "O_Wall_Collision_Left",
+  "name": "O_Select_Pause",
   "tags": [],
   "resourceType": "GMObject",
 }

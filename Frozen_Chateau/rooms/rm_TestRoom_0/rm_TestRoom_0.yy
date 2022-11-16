@@ -69,6 +69,8 @@
             {"properties":[],"isDnd":false,"objectId":{"name":"O_Block","path":"objects/O_Block/O_Block.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":0.8333333,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":250.0,"y":124.0,"resourceVersion":"1.0","name":"inst_194956D8","tags":[],"resourceType":"GMRInstance",},
             {"properties":[],"isDnd":false,"objectId":{"name":"O_NPC_Sign_Post","path":"objects/O_NPC_Sign_Post/O_NPC_Sign_Post.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":232.0,"y":172.0,"resourceVersion":"1.0","name":"inst_2B1BF3B4","tags":[],"resourceType":"GMRInstance",},
             {"properties":[],"isDnd":false,"objectId":{"name":"O_NPC_Sign_Post","path":"objects/O_NPC_Sign_Post/O_NPC_Sign_Post.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":228.0,"y":116.0,"resourceVersion":"1.0","name":"inst_24DCC344","tags":[],"resourceType":"GMRInstance",},
+            {"properties":[],"isDnd":false,"objectId":{"name":"O_Enemy_Slime","path":"objects/O_Enemy_Slime/O_Enemy_Slime.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":92.0,"y":116.0,"resourceVersion":"1.0","name":"inst_186C02EE","tags":[],"resourceType":"GMRInstance",},
+            {"properties":[],"isDnd":false,"objectId":{"name":"O_Enemy_Slime","path":"objects/O_Enemy_Slime/O_Enemy_Slime.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":160.0,"y":208.0,"resourceVersion":"1.0","name":"inst_3547B3AD","tags":[],"resourceType":"GMRInstance",},
           ],"visible":true,"depth":0,"userdefinedDepth":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":4,"gridY":4,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Instances_1_0","tags":[],"resourceType":"GMRInstanceLayer",},
         {"assets":[],"visible":true,"depth":5,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":4,"gridY":4,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Assets_1_0","tags":[],"resourceType":"GMRAssetLayer",},
         {"tilesetId":{"name":"TS_Chateau","path":"tilesets/TS_Chateau/TS_Chateau.yy",},"x":0,"y":0,"tiles":{"SerialiseWidth":63,"SerialiseHeight":33,"TileSerialiseData":[
@@ -186,6 +188,8 @@
     {"name":"inst_22DAB1E5","path":"rooms/rm_TestRoom_0/rm_TestRoom_0.yy",},
     {"name":"inst_5AFE8F49","path":"rooms/rm_TestRoom_0/rm_TestRoom_0.yy",},
     {"name":"inst_D73A893","path":"rooms/rm_TestRoom_0/rm_TestRoom_0.yy",},
+    {"name":"inst_186C02EE","path":"rooms/rm_TestRoom_0/rm_TestRoom_0.yy",},
+    {"name":"inst_3547B3AD","path":"rooms/rm_TestRoom_0/rm_TestRoom_0.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

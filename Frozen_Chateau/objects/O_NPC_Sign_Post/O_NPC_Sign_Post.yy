@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "Sign_Post",
-    "path": "sprites/Sign_Post/Sign_Post.yy",
+    "name": "spr_Sign_Post",
+    "path": "sprites/spr_Sign_Post/spr_Sign_Post.yy",
   },
   "solid": false,
   "visible": true,

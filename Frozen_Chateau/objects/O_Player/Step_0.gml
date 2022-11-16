@@ -164,11 +164,22 @@ switch(state){
 		speed = 0;
 		switch (global.PlayerInventory.equipped){
 			case global.PlayerInventory.inventory[0]: // Crossbow
-				state = States.Atk_Crossbow;
+				if(global.PlayerInventory.inventory[0].ammo > 0){
+					global.PlayerInventory.inventory[0].ammo--;
+					cb_timer = max_cb_timer;
+					state = States.Atk_Crossbow;
+				} else {
+					state = States.Idle;
+				}
 			break;
 			case global.PlayerInventory.inventory[1]: // Bombs
-				bomb_timer = max_bomb_timer;
-				state = States.Atk_Bombs;				
+				if(global.PlayerInventory.inventory[1].ammo > 0){
+					global.PlayerInventory.inventory[1].ammo--;
+					bomb_timer = max_bomb_timer;
+					state = States.Atk_Bombs;
+				} else {
+					state = States.Idle;
+				}			
 			break;
 			case global.PlayerInventory.inventory[2]: // Fire rod
 				state = States.Atk_Firerod;
@@ -193,12 +204,12 @@ switch(state){
 				case Facing_states.Left:
 					sprite_index = spr_Ocelotte_use_side;
 					image_xscale = 1;
-					instance_create_depth(x-spawn_dist,y,depth,O_Projectile_Bomb);
+					instance_create_depth(x-spawn_dist,y-4,depth,O_Projectile_Bolt_side);
 				break;
 				case Facing_states.Right:
 					sprite_index = spr_Ocelotte_use_side;
 					image_xscale = -1;
-					instance_create_depth(x+spawn_dist,y,depth,O_Projectile_Bomb);
+					instance_create_depth(x+spawn_dist,y-4,depth,O_Projectile_Bolt_side);
 				break;
 			}
 		}
@@ -299,12 +310,15 @@ switch(state){
 	break;
 	
 	case States.Hurt:
-	// Set a speed, and direction and timer based on what you were hit by.
+		// Set a speed, and direction and timer based on what you were hit by.
 		
+		if(hurt_timer <= 0) state = States.Idle;
+		hurt_timer--;
 	break;
 	
 	case States.Dead:
 		speed = 0;
+		image_speed =0;
 	break;
 		
 	default:
@@ -326,7 +340,7 @@ if(RButtonPressed()){
 	set_Equipped_Item_Next();
 }
 // Health check
-if(global.PlayerData.HP < 0){
+if(global.PlayerData.HP <= 0){
 	global.PlayerData.HP = 0;
 	state = States.Dead;
 } 
