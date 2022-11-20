@@ -7,7 +7,10 @@
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "O_Chunk",
+    "path": "objects/O_Chunk/O_Chunk.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,

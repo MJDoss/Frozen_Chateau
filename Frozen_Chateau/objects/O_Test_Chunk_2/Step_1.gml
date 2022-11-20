@@ -1,4 +1,3 @@
-/// @description 
 
 switch (state) {
 	case States.Spawn:
@@ -14,9 +13,10 @@ switch (state) {
 	break;
 	
 	case States.Active:
-		instance_activate_region(bbox_left +2, bbox_top+2, sprite_width-2, sprite_height-2, true);
+		instance_activate_region(bbox_left +4, bbox_top+4, sprite_width-8, sprite_height-8, true);
+		global.PlayerData.chunk = id;
+		show_debug_message("Current_Chunk 2 is active");
 		layer_set_visible(floor_layer, true);
-		
 		var _player = collision_rectangle(bbox_left+ 2, bbox_bottom -2, bbox_right-2, bbox_top + 2, O_Player,false,true);
 			if(_player == noone){
 				state = States.Inactive;
@@ -28,8 +28,7 @@ switch (state) {
 	break;
 	
 	case States.Inactive:
-		instance_deactivate_region(bbox_left +2, bbox_top+2, sprite_width-2, sprite_height-2, true, true);
-		instance_activate_object(O_Player);
+		instance_deactivate_region(bbox_left +4, bbox_top+4, sprite_width-8, sprite_height-8, true, true);
 		layer_set_visible(floor_layer, false);
 		var _player = collision_rectangle(bbox_left+ 2, bbox_bottom -2, bbox_right-2, bbox_top + 2,  O_Player,false,true);
 			if(_player != noone){
@@ -43,3 +42,6 @@ switch (state) {
 		
 	break;
 }
+instance_activate_object(O_Chunk);
+instance_activate_object(O_Player);
+

@@ -66,6 +66,10 @@ state = States.Idle;
 speed = 0;
 direction = 270;
 
+// Remove duplicate Player objects cause this is supposed to be a singleton
+
+
+
 function Hurt_Speed(_damage){
 	return _damage/10;
 }
@@ -75,4 +79,8 @@ function Hurt_IFrames(_damage){
 function has_iframes(){
 	return (iframes > 0);
 }
+function delete_self(){
+	instance_destroy();
+}
+
 

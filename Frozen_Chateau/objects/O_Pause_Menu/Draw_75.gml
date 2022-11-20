@@ -27,6 +27,7 @@ switch(sel){
 		if(AButtonPressed()) {
 			audio_play_sound(SFX_message_finish,1,0);
 			instance_destroy(O_Pause);
+			instance_destroy(O_Player);
 			// Save game line
 			room_goto(rm_TitleScreen);
 		}

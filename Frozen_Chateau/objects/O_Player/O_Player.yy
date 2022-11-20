@@ -6,7 +6,7 @@
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
-  "persistent": false,
+  "persistent": true,
   "parentObjectId": {
     "name": "O_Effected_By_Walls",
     "path": "objects/O_Effected_By_Walls/O_Effected_By_Walls.yy",

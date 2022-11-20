@@ -30,11 +30,12 @@ switch(state){
 		image_speed = 0;
 			
 		if(AllDirectionalChecks()){ state=States.Walk; }
-		if(XButtonPressed()){
+		if(XButtonPressed() && global.PlayerData.stamina > stamina_cost){
 			global.PlayerData.stamina -= stamina_cost;
 			atk_sword_timer = max_atk_sword_timer;
+			stamina_wait = max_stamina_wait;
 			state=States.Atk_Sword; }
-		if(YButtonPressed()){ state=States.Pre_Atk_Secondary; }
+		if(YButtonPressed()&& use_equipped_timer<=0){ state=States.Pre_Atk_Secondary; }
 		if(BButtonPressed()){ state=States.Use_Flask; }
 		// if(AButtonPressed()){ }
 
@@ -91,11 +92,15 @@ switch(state){
 			}
 			
 		if(!AllDirectionalChecks()){ state=States.Idle; }
-		if(XButtonPressed()){
+		if(XButtonPressed() && global.PlayerData.stamina > stamina_cost){
 			global.PlayerData.stamina -= stamina_cost;
+			stamina_wait = max_stamina_wait;
 			atk_sword_timer = max_atk_sword_timer;
-			state=States.Atk_Sword; }
-		if(YButtonPressed() && use_equipped_timer<=0){ state=States.Pre_Atk_Secondary; }
+			state=States.Atk_Sword; 
+			}
+		if(YButtonPressed() && use_equipped_timer<=0){
+			state=States.Pre_Atk_Secondary;
+			}
 		if(BButtonPressed() && global.PlayerData.flask_count > 0){
 			flask_timer = max_flask_timer;
 			state=States.Use_Flask; 
@@ -138,23 +143,26 @@ switch(state){
 		
 	case States.Atk_Sword:
 		speed = 0;
-		switch(facing){
-			case Facing_states.Up:
-				//sprite_index = spr_Ocelotte_Sword_up;
-				image_xscale = 1;
-			break;
-			case Facing_states.Down:
-				//sprite_index = spr_Ocelotte_Sword_down;
-				image_xscale = 1;
-			break;
-			case Facing_states.Left:
-				//sprite_index = spr_Ocelotte_Sword_side;
-				image_xscale = 1;
-			break;
-			case Facing_states.Right:
-				//sprite_index = spr_Ocelotte_Sword_side;
-				image_xscale = -1;
-			break;
+		if (atk_sword_timer == max_atk_sword_timer){
+			instance_create_depth(x,y,depth,O_Sword);
+			switch(facing){
+				case Facing_states.Up:
+					sprite_index = spr_Ocelotte_use_up;
+					image_xscale = 1;
+				break;
+				case Facing_states.Down:
+					sprite_index = spr_Ocelotte_use_down;
+					image_xscale = 1;
+				break;
+				case Facing_states.Left:
+					sprite_index = spr_Ocelotte_use_side;
+					image_xscale = 1;
+				break;
+				case Facing_states.Right:
+					sprite_index = spr_Ocelotte_use_side;
+					image_xscale = -1;
+				break;
+			}
 		}
 		if(atk_sword_timer <=0) state = States.Idle;
 		atk_sword_timer--;
@@ -194,22 +202,22 @@ switch(state){
 				case Facing_states.Up:
 					sprite_index = spr_Ocelotte_use_up;
 					image_xscale = 1;
-					instance_create_depth(x,y-spawn_dist,depth,O_Projectile_Bomb);
+					instance_create_depth(x,y-spawn_dist,depth,O_Projectile_Bolt);
 				break;
 				case Facing_states.Down:
 					sprite_index = spr_Ocelotte_use_down;
 					image_xscale = 1;
-					instance_create_depth(x,y+spawn_dist,depth,O_Projectile_Bomb);
+					instance_create_depth(x,y+spawn_dist,depth,O_Projectile_Bolt);
 				break;
 				case Facing_states.Left:
 					sprite_index = spr_Ocelotte_use_side;
 					image_xscale = 1;
-					instance_create_depth(x-spawn_dist,y-4,depth,O_Projectile_Bolt_side);
+					instance_create_depth(x-spawn_dist,y-4,depth,O_Projectile_Bolt);
 				break;
 				case Facing_states.Right:
 					sprite_index = spr_Ocelotte_use_side;
 					image_xscale = -1;
-					instance_create_depth(x+spawn_dist,y-4,depth,O_Projectile_Bolt_side);
+					instance_create_depth(x+spawn_dist,y-4,depth,O_Projectile_Bolt);
 				break;
 			}
 		}
@@ -311,8 +319,11 @@ switch(state){
 	
 	case States.Hurt:
 		// Set a speed, and direction and timer based on what you were hit by.
-		
-		if(hurt_timer <= 0) state = States.Idle;
+		visible = hurt_timer mod 2;
+		if(hurt_timer <= 0){
+			visible = 1;
+			state = States.Idle;
+		}
 		hurt_timer--;
 	break;
 	

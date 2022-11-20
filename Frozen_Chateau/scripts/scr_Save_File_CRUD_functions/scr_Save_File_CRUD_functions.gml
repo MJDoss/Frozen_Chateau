@@ -61,6 +61,32 @@ function Create_Save_File(){
 	ini_write_real("InventoryData","Firerod_max_ammo",-1);
 	ini_write_real("InventoryData","Firerod_ammo",-1);
 	
+	// Dungeon Data
+	// Chests
+	ini_write_real("DungeonData", "Chest_0", 0);
+	ini_write_real("DungeonData", "Chest_1", 0);
+	ini_write_real("DungeonData", "Chest_2", 0);
+	ini_write_real("DungeonData", "Chest_3", 0);
+	ini_write_real("DungeonData", "Chest_4", 0);
+	// Keys
+	ini_write_real("DungeonData", "Key_count", 0);
+	ini_write_real("DungeonData", "Key_0", 0);
+	ini_write_real("DungeonData", "Key_1", 0);
+	ini_write_real("DungeonData", "Key_2", 0);
+	// Key Doors
+	ini_write_real("DungeonData", "Key_Door_0", 0);
+	ini_write_real("DungeonData", "Key_Door_1", 0);
+	ini_write_real("DungeonData", "Key_Door_2", 0);
+	// Bombiwall doors
+	ini_write_real("DungeonData", "Bombiwall_0", 0);
+	ini_write_real("DungeonData", "Bombiwall_1", 0);
+	// HP Max increase
+	ini_write_real("DungeonData", "Hearty_herb_0", 0);
+	// Firerod
+	ini_write_real("DungeonData", "Firerod", 0);
+	
+	
+	
 	ini_close();
 }
 
@@ -97,8 +123,8 @@ function Init_Player_Data(){
 		max_flask_count : ini_read_real("PlayerData", "Max_Flask_count",3),
 		flask_heal : ini_read_real("PlayerData", "Flask_heal",40),
 		p_room : ini_read_string("PlayerData", "Room", "rm_Chateau_Entrance"),
-		//chunk : ini_read_string("PlayerData", "Chunk", "rm_Chateau_Entrance"),
-		fountain : ini_read_string("PlayerData", "Fountain", "Start"),
+		chunk : ini_read_string("PlayerData", "Chunk", noone),
+		save_spawn : ini_read_string("PlayerData", "Fountain", "Start"),
 	}
 	global.PlayerInventory = {
 		inventory : [inv_crossbow, inv_bombs, inv_firerod],
