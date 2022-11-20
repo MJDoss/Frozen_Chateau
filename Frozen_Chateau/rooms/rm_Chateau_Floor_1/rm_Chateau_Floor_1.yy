@@ -204,6 +204,8 @@
         {"properties":[],"isDnd":false,"objectId":{"name":"O_Block_enemy","path":"objects/O_Block_enemy/O_Block_enemy.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":854.0,"y":284.0,"resourceVersion":"1.0","name":"inst_273C3C34","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"O_Block_enemy","path":"objects/O_Block_enemy/O_Block_enemy.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":856.0,"y":244.0,"resourceVersion":"1.0","name":"inst_521168B4","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"O_Bombiwall_0","path":"objects/O_Bombiwall_0/O_Bombiwall_0.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":388.0,"y":524.0,"resourceVersion":"1.0","name":"inst_7FD47BB2","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"O_Chest_0","path":"objects/O_Chest_0/O_Chest_0.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":388.0,"y":392.0,"resourceVersion":"1.0","name":"inst_513EBA91","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"O_Chest_1","path":"objects/O_Chest_1/O_Chest_1.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":860.0,"y":120.0,"resourceVersion":"1.0","name":"inst_6841D8FC","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":-900,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":4,"gridY":4,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Instances","tags":[],"resourceType":"GMRInstanceLayer",},
     {"visible":true,"depth":-800,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":4,"gridY":4,"layers":[
         {"assets":[
@@ -897,6 +899,8 @@
     {"name":"inst_521168B4","path":"rooms/rm_Chateau_Floor_1/rm_Chateau_Floor_1.yy",},
     {"name":"inst_54D5546B","path":"rooms/rm_Chateau_Floor_1/rm_Chateau_Floor_1.yy",},
     {"name":"inst_7FD47BB2","path":"rooms/rm_Chateau_Floor_1/rm_Chateau_Floor_1.yy",},
+    {"name":"inst_513EBA91","path":"rooms/rm_Chateau_Floor_1/rm_Chateau_Floor_1.yy",},
+    {"name":"inst_6841D8FC","path":"rooms/rm_Chateau_Floor_1/rm_Chateau_Floor_1.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

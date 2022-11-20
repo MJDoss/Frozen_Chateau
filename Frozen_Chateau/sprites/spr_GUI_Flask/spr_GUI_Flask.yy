@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"6241301f-6b35-4fb0-8485-b3f27be16dc2","path":"sprites/spr_GUI_Key/spr_GUI_Key.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6241301f-6b35-4fb0-8485-b3f27be16dc2","path":"sprites/spr_GUI_Key/spr_GUI_Key.yy",},"LayerId":{"name":"37792a87-9c6a-4049-b194-ab72238498f4","path":"sprites/spr_GUI_Key/spr_GUI_Key.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_GUI_Key","path":"sprites/spr_GUI_Key/spr_GUI_Key.yy",},"resourceVersion":"1.0","name":"6241301f-6b35-4fb0-8485-b3f27be16dc2","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"286964f6-2505-4058-a85e-0d172aedaa6b","path":"sprites/spr_GUI_Flask/spr_GUI_Flask.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"286964f6-2505-4058-a85e-0d172aedaa6b","path":"sprites/spr_GUI_Flask/spr_GUI_Flask.yy",},"LayerId":{"name":"aa773d9d-b25f-4384-9386-8d869da46156","path":"sprites/spr_GUI_Flask/spr_GUI_Flask.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_GUI_Flask","path":"sprites/spr_GUI_Flask/spr_GUI_Flask.yy",},"resourceVersion":"1.0","name":"286964f6-2505-4058-a85e-0d172aedaa6b","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_GUI_Key","path":"sprites/spr_GUI_Key/spr_GUI_Key.yy",},
+    "spriteId": {"name":"spr_GUI_Flask","path":"sprites/spr_GUI_Flask/spr_GUI_Flask.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"b4dffa37-6eae-453c-9e20-875ee63b35e5","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6241301f-6b35-4fb0-8485-b3f27be16dc2","path":"sprites/spr_GUI_Key/spr_GUI_Key.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"00525df0-bd1b-4e93-b3d7-99f526aecf97","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"286964f6-2505-4058-a85e-0d172aedaa6b","path":"sprites/spr_GUI_Flask/spr_GUI_Flask.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_GUI_Key","path":"sprites/spr_GUI_Key/spr_GUI_Key.yy",},
+    "parent": {"name":"spr_GUI_Flask","path":"sprites/spr_GUI_Flask/spr_GUI_Flask.yy",},
     "resourceVersion": "1.4",
-    "name": "spr_GUI_Key",
+    "name": "spr_GUI_Flask",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"37792a87-9c6a-4049-b194-ab72238498f4","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"aa773d9d-b25f-4384-9386-8d869da46156","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/In game Sprites/GUI Sprites.yy",
   },
   "resourceVersion": "1.0",
-  "name": "spr_GUI_Key",
+  "name": "spr_GUI_Flask",
   "tags": [],
   "resourceType": "GMSprite",
 }

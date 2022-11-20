@@ -8,8 +8,8 @@ switch(state){
 	var _player = collision_rectangle(bbox_left, bbox_bottom, bbox_right, bbox_bottom+8, O_Player,true,true);
 	if(_player != noone && AButtonPressed()){
 		ini_open("SaveFile.ini");
-		ini_write_real("DungeonData", "Chest_0", 1);
-		ini_write_real("DungeonData", "Key_0", 1);
+		ini_write_real("DungeonData", "Chest_1", 1);
+		ini_write_real("DungeonData", "Key_1", 1);
 		ini_close();
 		audio_play_sound(SFX_chest_open,1,0);
 		_player.state = _player.States.Read;

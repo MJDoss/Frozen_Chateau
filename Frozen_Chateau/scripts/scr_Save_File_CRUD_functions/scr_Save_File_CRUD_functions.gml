@@ -44,6 +44,7 @@ function Create_Save_File(){
 	ini_write_real("PlayerData","Flask_Heal", 40);
 	ini_write_string("PlayerData", "Fountain", "Start");
 	ini_write_string("PlayerData", "Room", "rm_Chateau_Entrance");
+	ini_write_real("PlayerData", "Key_Count", 0);
 	
 	// Inventory Data
 	// Crossbow
@@ -124,6 +125,7 @@ function Init_Player_Data(){
 		flask_heal : ini_read_real("PlayerData", "Flask_heal",40),
 		p_room : ini_read_string("PlayerData", "Room", "rm_Chateau_Entrance"),
 		chunk : ini_read_string("PlayerData", "Chunk", noone),
+		key_count : ini_read_real("PlayerData", "Key_Count", 0),
 		save_spawn : ini_read_string("PlayerData", "Fountain", "Start"),
 	}
 	global.PlayerInventory = {

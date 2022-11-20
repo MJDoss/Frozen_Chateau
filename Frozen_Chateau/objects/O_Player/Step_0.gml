@@ -265,12 +265,14 @@ switch(state){
 	break;
 		
 	case States.Use_Flask:
-		if(flask_timer <= 0){
+		sprite_index = spr_Ocelotte_drink_flask;
+		image_speed = 1;
+		if(image_index >= image_number-1){
 			global.PlayerData.flask_count--;
-			global.PlayerData.HP += 60;
+			global.PlayerData.HP += global.PlayerData.flask_heal;
 			state = States.Idle;
 			}
-		flask_timer--;
+		//flask_timer--;
 	break;
 
 	case States.Rest:

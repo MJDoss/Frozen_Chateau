@@ -15,7 +15,7 @@ States = {
 }
 
 ini_open("SaveFile.ini");
-if(ini_read_real("DungeonData", "Chest_0", 0)){ 
+if(ini_read_real("DungeonData", "Chest_1", 0)){ 
 	state = States.Opened;
 }else{
 	state = States.Closed;

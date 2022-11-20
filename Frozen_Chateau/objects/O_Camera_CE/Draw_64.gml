@@ -17,7 +17,13 @@ switch(state){
 	// Stamina bar
 	draw_sprite_ext(spr_GUI_Stamina_Bar_Fill,0,10*global.settings.winscale,18*global.settings.winscale, global.PlayerData.stamina * global.settings.winscale,global.settings.winscale,0,-1,1);
 	draw_sprite_ext(spr_GUI_Stamina_Bar,0,8*global.settings.winscale,16*global.settings.winscale,global.settings.winscale,global.settings.winscale,0,-1,1);
-
+	// Flask Count is just under Stamina
+	draw_set_font(fDialogue_x3);
+	var _posX = 10 * global.settings.winscale;
+	var _posY = 26 * global.settings.winscale;
+	draw_sprite_ext(spr_GUI_Flask,0,_posX, _posY, global.settings.winscale, global.settings.winscale,0,-1,1);
+	draw_text_color(_posX+(10*global.settings.winscale), _posY+(4*global.settings.winscale), "x" + string(global.PlayerData.flask_count),c_black,c_black,c_black,c_black,1);
+	
 
 	// Y_Button UI code
 	var _Y_positionX = 160*global.settings.winscale;
@@ -25,7 +31,6 @@ switch(state){
 	var _Y_Text_positionX = 174*global.settings.winscale;
 	var _Y_Text_positionY =  28*global.settings.winscale;
 	draw_sprite_ext(spr_GUI_Y_Button_Template,0, _Y_positionX,_Y_positionY, global.settings.winscale,global.settings.winscale,0,-1,1);
-	draw_set_font(fDialogue_x3);
 	switch(global.PlayerInventory.equipped){
 		case global.PlayerInventory.inventory[0]:
 			global.PlayerInventory.index = 0;

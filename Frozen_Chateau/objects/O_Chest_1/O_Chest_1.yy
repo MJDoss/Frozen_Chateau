@@ -34,7 +34,7 @@
     "path": "folders/Objects/Instance Scope/In game objects/rm_Chateau_Floor_1.yy",
   },
   "resourceVersion": "1.0",
-  "name": "O_Chest_0",
+  "name": "O_Chest_1",
   "tags": [],
   "resourceType": "GMObject",
 }
