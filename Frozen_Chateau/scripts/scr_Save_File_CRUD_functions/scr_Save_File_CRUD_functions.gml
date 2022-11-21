@@ -68,7 +68,7 @@ function Create_Save_File(){
 	ini_write_real("DungeonData", "Chest_1", 0);
 	ini_write_real("DungeonData", "Chest_2", 0);
 	ini_write_real("DungeonData", "Chest_3", 0);
-	ini_write_real("DungeonData", "Chest_4", 0);
+	ini_write_real("DungeonData", "Big_Chest_0", 0);
 	// Keys
 	ini_write_real("DungeonData", "Key_count", 0);
 	ini_write_real("DungeonData", "Key_0", 0);

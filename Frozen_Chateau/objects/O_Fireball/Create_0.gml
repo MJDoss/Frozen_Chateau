@@ -1,9 +1,9 @@
 
 image_index = 0;
-image_speed = 0;
+image_speed = 1;
 speed = 4;
 timer = 60;
-
+audio_play_sound(SFX_Fire_rod,1,0);
 switch(O_Player.facing){
 	case O_Player.Facing_states.Up:
 	direction = 90;

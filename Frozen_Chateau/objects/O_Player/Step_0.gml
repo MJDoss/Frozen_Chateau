@@ -8,6 +8,7 @@ switch(state){
 		spawn_timer--;
 	case States.Idle:
 		speed = 0;
+		visible = 1;
 		switch(facing){
 			case Facing_states.Up:
 				sprite_index = spr_Ocelotte_walk_up;
@@ -36,7 +37,10 @@ switch(state){
 			stamina_wait = max_stamina_wait;
 			state=States.Atk_Sword; }
 		if(YButtonPressed()&& use_equipped_timer<=0){ state=States.Pre_Atk_Secondary; }
-		if(BButtonPressed()){ state=States.Use_Flask; }
+		if(BButtonPressed() && global.PlayerData.flask_count > 0){
+			image_index=0;
+			state=States.Use_Flask;
+			}
 		// if(AButtonPressed()){ }
 
 	break;
@@ -102,7 +106,7 @@ switch(state){
 			state=States.Pre_Atk_Secondary;
 			}
 		if(BButtonPressed() && global.PlayerData.flask_count > 0){
-			flask_timer = max_flask_timer;
+			image_index = 0;
 			state=States.Use_Flask; 
 			}
 		if(AButtonPressed() && (global.PlayerData.stamina >= 10) ){ 
@@ -119,11 +123,11 @@ switch(state){
 		speed = roll_speed;
 		switch(facing){
 			case Facing_states.Up:
-				//sprite_index = spr_Ocelotte_up;
+				sprite_index = spr_Ocelotte_roll_side;
 				image_xscale = 1;
 			break;
 			case Facing_states.Down:
-				//sprite_index = spr_Ocelotte_down;
+				sprite_index = spr_Ocelotte_roll_side;
 				image_xscale = 1;
 			break;
 			case Facing_states.Left:
@@ -190,6 +194,7 @@ switch(state){
 				}			
 			break;
 			case global.PlayerInventory.inventory[2]: // Fire rod
+				fire_timer = max_fire_timer;
 				state = States.Atk_Firerod;
 			break;
 		}
@@ -261,13 +266,45 @@ switch(state){
 		bomb_timer--;
 	break;
 	case States.Atk_Firerod:
-		
+		// TODO
+		if fire_timer == max_fire_timer{
+			var spawn_dist = 10;
+			switch(facing){
+				case Facing_states.Up:
+					sprite_index = spr_Ocelotte_use_up;
+					image_xscale = 1;
+					instance_create_depth(x,y-spawn_dist,depth,O_Fireball);
+				break;
+				case Facing_states.Down:
+					sprite_index = spr_Ocelotte_use_down;
+					image_xscale = 1;
+					instance_create_depth(x,y+spawn_dist,depth,O_Fireball);
+				break;
+				case Facing_states.Left:
+					sprite_index = spr_Ocelotte_use_side;
+					image_xscale = 1;
+					instance_create_depth(x-spawn_dist,y,depth,O_Fireball);
+				break;
+				case Facing_states.Right:
+					sprite_index = spr_Ocelotte_use_side;
+					image_xscale = -1;
+					instance_create_depth(x+spawn_dist,y,depth,O_Fireball);
+				break;
+			}
+		}
+		if(fire_timer <= 0){
+			use_equipped_timer = max_use_equipped_timer;
+			state = States.Idle;
+		}
+		fire_timer--;
 	break;
 		
 	case States.Use_Flask:
 		sprite_index = spr_Ocelotte_drink_flask;
+		speed=0;
 		image_speed = 1;
 		if(image_index >= image_number-1){
+			audio_play_sound(SFX_life_refill,1,0);
 			global.PlayerData.flask_count--;
 			global.PlayerData.HP += global.PlayerData.flask_heal;
 			state = States.Idle;

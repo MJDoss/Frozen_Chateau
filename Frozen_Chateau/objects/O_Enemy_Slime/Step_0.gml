@@ -51,6 +51,9 @@ if(place_meeting(x,y,O_Bomb_Explosion) && iframes <= 0){
 if(place_meeting(x,y,O_Fireball) && iframes <= 0){
 	HP-=Damage_From.Bomb;
 	iframes+=15;
+	with(O_Fireball){
+		instance_destroy();
+	}
 }
 if(place_meeting(x,y,O_Projectile_Bolt) && iframes <= 0){
 	HP-=Damage_From.Bolt;

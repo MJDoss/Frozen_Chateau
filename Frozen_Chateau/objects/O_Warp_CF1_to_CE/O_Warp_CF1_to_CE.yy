@@ -28,6 +28,10 @@
   ],
   "properties": [],
   "overriddenProperties": [],
+  "parent": {
+    "name": "rm_Chateau_Floor_1",
+    "path": "folders/Objects/Instance Scope/In game objects/rm_Chateau_Floor_1.yy",
+  },
   "resourceVersion": "1.0",
   "name": "O_Warp_CF1_to_CE",
   "tags": [],

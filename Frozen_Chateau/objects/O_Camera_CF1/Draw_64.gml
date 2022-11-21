@@ -97,7 +97,7 @@ switch(state){
 			draw_sprite_ext(global.PlayerInventory.inventory[1].sprite,0, _R_positionX,_R_positionY, global.settings.winscale,global.settings.winscale,0,-1,1);
 		break;
 		case 2:
-			draw_sprite_ext(global.PlayerInventory.inventory[2].sprite,0, _L_positionX,_R_positionY, global.settings.winscale,global.settings.winscale,0,-1,1);
+			draw_sprite_ext(global.PlayerInventory.inventory[2].sprite,0, _R_positionX,_R_positionY, global.settings.winscale,global.settings.winscale,0,-1,1);
 		break;
 	}
 	break;
