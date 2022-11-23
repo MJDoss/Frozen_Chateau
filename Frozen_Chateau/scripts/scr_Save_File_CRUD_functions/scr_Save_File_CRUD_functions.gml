@@ -123,7 +123,7 @@ function Init_Player_Data(){
 		flask_count : ini_read_real("PlayerData", "Flask_count",3),
 		max_flask_count : ini_read_real("PlayerData", "Max_Flask_count",3),
 		flask_heal : ini_read_real("PlayerData", "Flask_heal",40),
-		p_room : ini_read_string("PlayerData", "Room", "rm_Chateau_Entrance"),
+		//p_room : ini_read_string("PlayerData", "Room", "rm_Chateau_Entrance"),
 		chunk : ini_read_string("PlayerData", "Chunk", noone),
 		key_count : ini_read_real("PlayerData", "Key_Count", 0),
 		save_spawn : ini_read_string("PlayerData", "Fountain", "Start"),
@@ -141,7 +141,11 @@ function Init_Player_Data(){
 
 
 
-// 
+// Where to load.
+function goto_room_from_save(){
+	if(global.PlayerData.save_spawn == "Start") room_goto(rm_Chateau_Entrance);
+	if(global.PlayerData.save_spawn == "Chateau_Floor_3") room_goto(rm_Chateau_Entrance);
+}
 
 
 // Delete

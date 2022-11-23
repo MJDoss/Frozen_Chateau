@@ -45,6 +45,7 @@ switch(state){
 			charge_chance = irandom_range(0,3);
 		}
 		charged_timer--;
+		if(place_meeting(x,y,O_Wall)) charged_timer-=5;
 		if(HP <= 0) state = States.Dying;
 	break;
 	

@@ -5,7 +5,7 @@ event_inherited();
 max_HP = 12;
 HP = max_HP;
 spd = .4;
-damage = 10;
+damage = 16;
 
 spawn_timer = 5;
 roam_timer = 0;

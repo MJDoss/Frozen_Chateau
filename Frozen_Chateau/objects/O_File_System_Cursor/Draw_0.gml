@@ -16,7 +16,8 @@ switch (word){
 			Init_Player_Data();
 			audio_stop_all();
 			instance_create_depth(0,0,0,O_Pause);
-			room_goto(rm_Chateau_Entrance);
+			//room_goto(rm_Chateau_Entrance);
+			goto_room_from_save();
 			audio_play_sound(music_KF4_Mansion_of_Howling_Winds, 1, 1);	
 		}
 		if(UpPressed()){ 
