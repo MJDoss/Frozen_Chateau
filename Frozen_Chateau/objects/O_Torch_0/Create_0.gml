@@ -7,3 +7,4 @@ dir_bottom_left = point_direction(x, y, bbox_left, bbox_bottom);
 
 lit = false;
 
+image_speed = 0;

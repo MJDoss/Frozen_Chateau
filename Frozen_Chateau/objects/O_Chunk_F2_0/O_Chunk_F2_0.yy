@@ -4,7 +4,7 @@
     "path": "sprites/spr_Chunk/spr_Chunk.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {

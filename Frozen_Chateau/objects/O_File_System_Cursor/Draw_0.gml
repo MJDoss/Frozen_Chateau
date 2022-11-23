@@ -12,6 +12,13 @@ switch (word){
 	case "Continue" :
 		// TODO
 		y = 76;
+		if(AButtonPressed()){
+			Init_Player_Data();
+			audio_stop_all();
+			instance_create_depth(0,0,0,O_Pause);
+			room_goto(rm_Chateau_Entrance);
+			audio_play_sound(music_KF4_Mansion_of_Howling_Winds, 1, 1);	
+		}
 		if(UpPressed()){ 
 			audio_play_sound(SFX_message,1,0);
 			ind--;

@@ -369,6 +369,9 @@ switch(state){
 	case States.Dead:
 		speed = 0;
 		image_speed =0;
+		instance_deactivate_all(true);
+		instance_create_depth(x,y,depth,O_Game_Over);
+		instance_destroy();
 	break;
 		
 	default:

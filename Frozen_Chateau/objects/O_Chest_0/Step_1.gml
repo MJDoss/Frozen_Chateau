@@ -10,10 +10,11 @@ switch(state){
 		ini_open("SaveFile.ini");
 		ini_write_real("DungeonData", "Chest_0", 1);
 		ini_write_real("DungeonData", "Key_0", 1);
+		global.PlayerData.key_count++;
+		ini_write_real("PlayerData", "Key_Count", global.PlayerData.key_count);
 		ini_close();
 		audio_play_sound(SFX_chest_open,1,0);
 		_player.state = _player.States.Read;
-		global.PlayerData.key_count++;
 		state = States.Opening;
 	}
 	break;

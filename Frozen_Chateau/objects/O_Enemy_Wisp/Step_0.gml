@@ -4,7 +4,7 @@ switch(state){
 	case States.Spawn:
 		if(spawn_timer==0){
 			state = States.Roam;
-			roam_timer = 15*irandom_range(1,3);
+			roam_timer = 15*irandom_range(1,2);
 			direction = irandom_range(0,7) * 45;
 		}
 		spawn_timer--;
@@ -19,7 +19,7 @@ switch(state){
 				state = States.Charging;
 			}
 			direction = irandom_range(0,359);
-			charge_chance = irandom_range(0,3);
+			charge_chance = irandom_range(0,2);
 			roam_timer = irandom_range(1,3) * 15;
 		}
 		roam_timer--;
@@ -49,8 +49,9 @@ switch(state){
 	break;
 	
 	case States.Dying:
-		speed = 0;
+		//speed = 0;
 		image_speed = 0;
+		direction = point_direction(O_Player.x, O_Player.y,x,y);
 		image_alpha = dying_timer/30;
 		if(dying_timer <= 0) state = States.Dead;
 		dying_timer--;
