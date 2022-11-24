@@ -10,5 +10,5 @@ if(_player != noone){
 	}
 	audio_play_sound(SFX_door_open,1,0);
 	
-	room_goto(rm_Chateau_Floor_2);
+	room_goto(rm_Chateau_Floor_3);
 }

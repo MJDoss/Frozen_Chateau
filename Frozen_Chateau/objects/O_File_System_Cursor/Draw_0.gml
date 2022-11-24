@@ -17,6 +17,7 @@ switch (word){
 			audio_stop_all();
 			instance_create_depth(0,0,0,O_Pause);
 			//room_goto(rm_Chateau_Entrance);
+			//show_debug_message(global.PlayerData.save_spawn);
 			goto_room_from_save();
 			audio_play_sound(music_KF4_Mansion_of_Howling_Winds, 1, 1);	
 		}

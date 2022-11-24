@@ -144,7 +144,7 @@ function Init_Player_Data(){
 // Where to load.
 function goto_room_from_save(){
 	if(global.PlayerData.save_spawn == "Start") room_goto(rm_Chateau_Entrance);
-	if(global.PlayerData.save_spawn == "Chateau_Floor_3") room_goto(rm_Chateau_Entrance);
+	if(global.PlayerData.save_spawn == "Chateau_Floor_3") room_goto(rm_Chateau_Floor_3);
 }
 
 
