@@ -46,6 +46,6 @@ switch (state) {
 	*/
 }
 
-
 instance_activate_object(O_Chunk);
+instance_activate_object(O_Wall);
 instance_activate_object(O_Player);
