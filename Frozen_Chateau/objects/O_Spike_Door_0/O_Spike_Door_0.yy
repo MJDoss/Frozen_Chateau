@@ -1,10 +1,16 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "Door_sealed",
+    "path": "sprites/Door_sealed/Door_sealed.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "O_Wall_Collision_Down",
+    "path": "objects/O_Wall_Collision_Down/O_Wall_Collision_Down.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -17,12 +23,16 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":2,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "rm_Chateau_Floor_1",
-    "path": "folders/Objects/Instance Scope/In game objects/rm_Chateau_Floor_1.yy",
+    "name": "rm_Chateau_Basement_1",
+    "path": "folders/Objects/Instance Scope/In game objects/rm_Chateau_Basement_1.yy",
   },
   "resourceVersion": "1.0",
   "name": "O_Spike_Door_0",
