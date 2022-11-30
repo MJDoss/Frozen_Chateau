@@ -10,7 +10,7 @@ States = {
 	Dead : 3
 }
 state = States.Spawn;
-spawn_timer = 5;
+spawn_timer = 10;
 dying_timer = 150;
 
 dir_top_right = point_direction(x, y, bbox_right, bbox_top);

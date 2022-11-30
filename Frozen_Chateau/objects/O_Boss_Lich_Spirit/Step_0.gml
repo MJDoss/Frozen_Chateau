@@ -21,7 +21,7 @@ switch(state){
 		speed =0;
 		
 	break;
-	case States.Atk_V_Shards:
+	case States.Attack:
 		//direction-=2;
 		speed =0;
 		

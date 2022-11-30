@@ -1,16 +1,13 @@
 {
   "spriteId": {
-    "name": "spr_Boss_Phylactery_Lich",
-    "path": "sprites/spr_Boss_Phylactery_Lich/spr_Boss_Phylactery_Lich.yy",
+    "name": "spr_Vertical_Ice_Shards",
+    "path": "sprites/spr_Vertical_Ice_Shards/spr_Vertical_Ice_Shards.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "O_Boss",
-    "path": "objects/O_Boss/O_Boss.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -24,11 +21,8 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":75,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":2,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":1,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -37,7 +31,7 @@
     "path": "folders/Objects/Instance Scope/In game objects/Affected by Walls/Enemy objects/Boss Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "O_Boss_Lich",
+  "name": "O_V_Shards",
   "tags": [],
   "resourceType": "GMObject",
 }

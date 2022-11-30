@@ -167,6 +167,7 @@
     {"id":{"name":"O_DebugMenu","path":"objects/O_DebugMenu/O_DebugMenu.yy",},"order":1,},
     {"id":{"name":"O_File_System_Cursor","path":"objects/O_File_System_Cursor/O_File_System_Cursor.yy",},"order":0,},
     {"id":{"name":"spr_Projectile_Bomb","path":"sprites/spr_Projectile_Bomb/spr_Projectile_Bomb.yy",},"order":0,},
+    {"id":{"name":"O_V_Shards","path":"objects/O_V_Shards/O_V_Shards.yy",},"order":5,},
     {"id":{"name":"O_Bombiwa_Wall","path":"objects/O_Bombiwa_Wall/O_Bombiwa_Wall.yy",},"order":2,},
     {"id":{"name":"spr_Game_Over_screen","path":"sprites/spr_Game_Over_screen/spr_Game_Over_screen.yy",},"order":23,},
     {"id":{"name":"O_Fill_bar_SFX","path":"objects/O_Fill_bar_SFX/O_Fill_bar_SFX.yy",},"order":4,},

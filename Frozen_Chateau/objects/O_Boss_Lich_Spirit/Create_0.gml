@@ -4,7 +4,7 @@ States = {
 	Spawn : 0,
 	Idle : 1,
 	Charging_V_Shards : 2,
-	Atk_V_Shards : 3,
+	Attack : 3,
 	Dying : 30,
 	Dead : 31
 }
