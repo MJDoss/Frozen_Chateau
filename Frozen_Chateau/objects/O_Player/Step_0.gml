@@ -31,7 +31,7 @@ switch(state){
 		image_speed = 0;
 			
 		if(AllDirectionalChecks()){ state=States.Walk; }
-		if(XButtonPressed() && global.PlayerData.stamina > stamina_cost){
+		if(XButtonPressed() && global.PlayerData.stamina >= stamina_cost){
 			global.PlayerData.stamina -= stamina_cost;
 			atk_sword_timer = max_atk_sword_timer;
 			stamina_wait = max_stamina_wait;
@@ -96,7 +96,7 @@ switch(state){
 			}
 			
 		if(!AllDirectionalChecks()){ state=States.Idle; }
-		if(XButtonPressed() && global.PlayerData.stamina > stamina_cost){
+		if(XButtonPressed() && global.PlayerData.stamina >= stamina_cost){
 			global.PlayerData.stamina -= stamina_cost;
 			stamina_wait = max_stamina_wait;
 			atk_sword_timer = max_atk_sword_timer;
