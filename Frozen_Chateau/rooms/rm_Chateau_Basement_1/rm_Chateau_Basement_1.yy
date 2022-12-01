@@ -154,6 +154,7 @@
         {"properties":[],"isDnd":false,"objectId":{"name":"O_Block","path":"objects/O_Block/O_Block.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":0.375,"scaleY":0.333333343,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":108.0,"y":225.0,"resourceVersion":"1.0","name":"inst_66227D2F","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"O_Torch_0","path":"objects/O_Torch_0/O_Torch_0.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":412.0,"y":308.0,"resourceVersion":"1.0","name":"inst_3F5988D2","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"O_Spike_Door_0","path":"objects/O_Spike_Door_0/O_Spike_Door_0.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":392.0,"y":292.0,"resourceVersion":"1.0","name":"inst_4837B75B","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"O_Key_Door_1","path":"objects/O_Key_Door_1/O_Key_Door_1.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":136.0,"y":292.0,"resourceVersion":"1.0","name":"inst_33F6E2A4","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":0,"userdefinedDepth":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":1,"gridY":1,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Instances","tags":[],"resourceType":"GMRInstanceLayer",},
     {"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":4,"gridY":4,"layers":[
         {"assets":[
@@ -314,6 +315,7 @@
     {"name":"inst_66227D2F","path":"rooms/rm_Chateau_Basement_1/rm_Chateau_Basement_1.yy",},
     {"name":"inst_3F5988D2","path":"rooms/rm_Chateau_Basement_1/rm_Chateau_Basement_1.yy",},
     {"name":"inst_4837B75B","path":"rooms/rm_Chateau_Basement_1/rm_Chateau_Basement_1.yy",},
+    {"name":"inst_33F6E2A4","path":"rooms/rm_Chateau_Basement_1/rm_Chateau_Basement_1.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

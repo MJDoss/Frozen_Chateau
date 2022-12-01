@@ -6,11 +6,10 @@ dir_top_left = point_direction(x, y, bbox_left, bbox_top);
 dir_bottom_right = point_direction(x, y, bbox_right, bbox_bottom);
 dir_bottom_left = point_direction(x, y, bbox_left, bbox_bottom);
 
-depth = -y;
-States = {
-	Still : 0,
-	Melting : 1,
-	Melted : 2
+depth = -800;
+
+ini_open("SaveFile.ini");
+if(ini_read_real("DungeonData", "Key_Door_1", 0)){ 
+	instance_destroy();
 }
-melt_timer = 30;
-state = States.Still;
+ini_close();

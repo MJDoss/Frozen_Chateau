@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_Vertical_Ice_Shards",
-    "path": "sprites/spr_Vertical_Ice_Shards/spr_Vertical_Ice_Shards.yy",
+    "name": "Locked_Door",
+    "path": "sprites/Locked_Door/Locked_Door.yy",
   },
   "solid": false,
   "visible": true,
@@ -21,18 +21,18 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":2,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":1,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Boss Objects",
-    "path": "folders/Objects/Instance Scope/In game objects/Affected by Walls/Enemy objects/Boss Objects.yy",
+    "name": "rm_Chateau_Basement_1",
+    "path": "folders/Objects/Instance Scope/In game objects/rm_Chateau_Basement_1.yy",
   },
   "resourceVersion": "1.0",
-  "name": "O_V_Shards",
+  "name": "O_Key_Door_1",
   "tags": [],
   "resourceType": "GMObject",
 }
